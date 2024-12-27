@@ -7,6 +7,14 @@ settings:
 importers:
 
   .:
+    devDependencies:
+      typescript:
+        specifier: ~5.6.3
+        version: 5.6.3
+
+  packages/build: {}
+
+  packages/im-api:
     dependencies:
       '@nestjs/common':
         specifier: ^10.0.0
@@ -29,7 +37,7 @@ importers:
         version: 10.3.2
       '@nestjs/schematics':
         specifier: ^10.0.0
-        version: 10.1.1(chokidar@3.6.0)(typescript@5.7.2)
+        version: 10.1.1(chokidar@3.6.0)(typescript@5.3.3)
       '@nestjs/testing':
         specifier: ^10.0.0
         version: 10.3.3(@nestjs/common@10.4.7(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.7(@nestjs/common@10.4.7(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/platform-express@10.3.3)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/platform-express@10.3.3(@nestjs/common@10.4.7(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.7))
@@ -47,10 +55,10 @@ importers:
         version: 6.0.2
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.0.0
-        version: 6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1)(typescript@5.7.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.3.3))(eslint@8.57.1)(typescript@5.3.3)
       '@typescript-eslint/parser':
         specifier: ^6.0.0
-        version: 6.21.0(eslint@8.57.1)(typescript@5.7.2)
+        version: 6.21.0(eslint@8.57.1)(typescript@5.3.3)
       eslint:
         specifier: ^8.42.0
         version: 8.57.1
@@ -62,7 +70,7 @@ importers:
         version: 5.2.1(@types/eslint@9.6.1)(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.4.2)
       jest:
         specifier: ^29.5.0
-        version: 29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2))
+        version: 29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.3.3))
       prettier:
         specifier: ^3.0.0
         version: 3.4.2
@@ -74,19 +82,35 @@ importers:
         version: 6.3.4
       ts-jest:
         specifier: ^29.1.0
-        version: 29.2.5(@babel/core@7.26.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.0))(jest@29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2)))(typescript@5.7.2)
+        version: 29.2.5(@babel/core@7.26.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.0))(jest@29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.3.3)))(typescript@5.3.3)
       ts-loader:
         specifier: ^9.4.3
-        version: 9.5.1(typescript@5.7.2)(webpack@5.90.1)
+        version: 9.5.1(typescript@5.3.3)(webpack@5.90.1)
       ts-node:
         specifier: ^10.9.1
-        version: 10.9.2(@types/node@20.17.10)(typescript@5.7.2)
+        version: 10.9.2(@types/node@20.17.10)(typescript@5.3.3)
       tsconfig-paths:
         specifier: ^4.2.0
         version: 4.2.0
-      typescript:
-        specifier: ^5.1.3
-        version: 5.7.2
+
+  packages/im-web:
+    dependencies:
+      vue:
+        specifier: ^3.5.12
+        version: 3.5.13(typescript@5.7.2)
+      vue-router:
+        specifier: ^4.5.0
+        version: 4.5.0(vue@3.5.13(typescript@5.7.2))
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: ^5.1.4
+        version: 5.2.1(vite@5.4.11(@types/node@20.17.10)(terser@5.34.1))(vue@3.5.13(typescript@5.7.2))
+      vite:
+        specifier: ^5.4.10
+        version: 5.4.11(@types/node@20.17.10)(terser@5.34.1)
+      vue-tsc:
+        specifier: ^2.1.8
+        version: 2.1.10(typescript@5.7.2)
 
 packages:
 
@@ -262,6 +286,144 @@ packages:
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha1-AGKcNaaI4FqIsc2mhPudXnPwAKE=, tarball: https://registry.npm.qianxin-inc.cn/@cspotcode/source-map-support/download/@cspotcode/source-map-support-0.8.1.tgz}
     engines: {node: '>=12'}
+
+  '@esbuild/aix-ppc64@0.21.5':
+    resolution: {integrity: sha1-xxhKMmUz/N8bjuBzPiHHE7l1V18=, tarball: https://registry.npm.qianxin-inc.cn/@esbuild/aix-ppc64/download/@esbuild/aix-ppc64-0.21.5.tgz}
+    engines: {node: '>=12'}
+    cpu: [ppc64]
+    os: [aix]
+
+  '@esbuild/android-arm64@0.21.5':
+    resolution: {integrity: sha1-Cdm0NXeA2p6jp9+4M6Hx/0ObQFI=, tarball: https://registry.npm.qianxin-inc.cn/@esbuild/android-arm64/download/@esbuild/android-arm64-0.21.5.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [android]
+
+  '@esbuild/android-arm@0.21.5':
+    resolution: {integrity: sha1-mwQ4T7dxkm36bXrQQyTssqubLig=, tarball: https://registry.npm.qianxin-inc.cn/@esbuild/android-arm/download/@esbuild/android-arm-0.21.5.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm]
+    os: [android]
+
+  '@esbuild/android-x64@0.21.5':
+    resolution: {integrity: sha1-KZGOwtt1TO3LbBsE3ozWVHr2Rh4=, tarball: https://registry.npm.qianxin-inc.cn/@esbuild/android-x64/download/@esbuild/android-x64-0.21.5.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [android]
+
+  '@esbuild/darwin-arm64@0.21.5':
+    resolution: {integrity: sha1-5JW1OWYOUWkPOSivUKdvsKbM/yo=, tarball: https://registry.npm.qianxin-inc.cn/@esbuild/darwin-arm64/download/@esbuild/darwin-arm64-0.21.5.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@esbuild/darwin-x64@0.21.5':
+    resolution: {integrity: sha1-wTg4+lc3KDmr3dyR1xVCzuouHiI=, tarball: https://registry.npm.qianxin-inc.cn/@esbuild/darwin-x64/download/@esbuild/darwin-x64-0.21.5.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [darwin]
+
+  '@esbuild/freebsd-arm64@0.21.5':
+    resolution: {integrity: sha1-ZGuYmqIL+J/Qcd1dv61po1QuVQ4=, tarball: https://registry.npm.qianxin-inc.cn/@esbuild/freebsd-arm64/download/@esbuild/freebsd-arm64-0.21.5.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [freebsd]
+
+  '@esbuild/freebsd-x64@0.21.5':
+    resolution: {integrity: sha1-qmFc/ICvlU00WJBuOMoiwYz1wmE=, tarball: https://registry.npm.qianxin-inc.cn/@esbuild/freebsd-x64/download/@esbuild/freebsd-x64-0.21.5.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [freebsd]
+
+  '@esbuild/linux-arm64@0.21.5':
+    resolution: {integrity: sha1-cKxvoU9ct+H3+Ie8/7aArQmSK1s=, tarball: https://registry.npm.qianxin-inc.cn/@esbuild/linux-arm64/download/@esbuild/linux-arm64-0.21.5.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [linux]
+
+  '@esbuild/linux-arm@0.21.5':
+    resolution: {integrity: sha1-/G/RGorKVsH284lPK+oEefj2Jrk=, tarball: https://registry.npm.qianxin-inc.cn/@esbuild/linux-arm/download/@esbuild/linux-arm-0.21.5.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm]
+    os: [linux]
+
+  '@esbuild/linux-ia32@0.21.5':
+    resolution: {integrity: sha1-MnH1Oz+T49CT1RjRZJ1taNNG7eI=, tarball: https://registry.npm.qianxin-inc.cn/@esbuild/linux-ia32/download/@esbuild/linux-ia32-0.21.5.tgz}
+    engines: {node: '>=12'}
+    cpu: [ia32]
+    os: [linux]
+
+  '@esbuild/linux-loong64@0.21.5':
+    resolution: {integrity: sha1-7WLgQjjFcCauqDHFoTC3PA+fJt8=, tarball: https://registry.npm.qianxin-inc.cn/@esbuild/linux-loong64/download/@esbuild/linux-loong64-0.21.5.tgz}
+    engines: {node: '>=12'}
+    cpu: [loong64]
+    os: [linux]
+
+  '@esbuild/linux-mips64el@0.21.5':
+    resolution: {integrity: sha1-55uOtIvzsQb63sGsgkD7l7TmTL4=, tarball: https://registry.npm.qianxin-inc.cn/@esbuild/linux-mips64el/download/@esbuild/linux-mips64el-0.21.5.tgz}
+    engines: {node: '>=12'}
+    cpu: [mips64el]
+    os: [linux]
+
+  '@esbuild/linux-ppc64@0.21.5':
+    resolution: {integrity: sha1-XyIDhgoUO5kZ04PvdXNSH7FUw+Q=, tarball: https://registry.npm.qianxin-inc.cn/@esbuild/linux-ppc64/download/@esbuild/linux-ppc64-0.21.5.tgz}
+    engines: {node: '>=12'}
+    cpu: [ppc64]
+    os: [linux]
+
+  '@esbuild/linux-riscv64@0.21.5':
+    resolution: {integrity: sha1-B7yv2ZMi1a9i9hjLnmqbf0u4Jdw=, tarball: https://registry.npm.qianxin-inc.cn/@esbuild/linux-riscv64/download/@esbuild/linux-riscv64-0.21.5.tgz}
+    engines: {node: '>=12'}
+    cpu: [riscv64]
+    os: [linux]
+
+  '@esbuild/linux-s390x@0.21.5':
+    resolution: {integrity: sha1-t8z2hnUdaj5EuGJ6uryL4+9i2N4=, tarball: https://registry.npm.qianxin-inc.cn/@esbuild/linux-s390x/download/@esbuild/linux-s390x-0.21.5.tgz}
+    engines: {node: '>=12'}
+    cpu: [s390x]
+    os: [linux]
+
+  '@esbuild/linux-x64@0.21.5':
+    resolution: {integrity: sha1-bY8Mdo4HDmQwmvgAS7lOaKsrs7A=, tarball: https://registry.npm.qianxin-inc.cn/@esbuild/linux-x64/download/@esbuild/linux-x64-0.21.5.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [linux]
+
+  '@esbuild/netbsd-x64@0.21.5':
+    resolution: {integrity: sha1-u+Qw9g03jsuI3sshnGAmZzh6YEc=, tarball: https://registry.npm.qianxin-inc.cn/@esbuild/netbsd-x64/download/@esbuild/netbsd-x64-0.21.5.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [netbsd]
+
+  '@esbuild/openbsd-x64@0.21.5':
+    resolution: {integrity: sha1-mdHPKTcnlWDSEEgh9czOIgyyr3A=, tarball: https://registry.npm.qianxin-inc.cn/@esbuild/openbsd-x64/download/@esbuild/openbsd-x64-0.21.5.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [openbsd]
+
+  '@esbuild/sunos-x64@0.21.5':
+    resolution: {integrity: sha1-CHQVEsENUpVmurqDe0/gUsjzSHs=, tarball: https://registry.npm.qianxin-inc.cn/@esbuild/sunos-x64/download/@esbuild/sunos-x64-0.21.5.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [sunos]
+
+  '@esbuild/win32-arm64@0.21.5':
+    resolution: {integrity: sha1-Z1tzhTmEESQHNQFhRKsumaYPx10=, tarball: https://registry.npm.qianxin-inc.cn/@esbuild/win32-arm64/download/@esbuild/win32-arm64-0.21.5.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [win32]
+
+  '@esbuild/win32-ia32@0.21.5':
+    resolution: {integrity: sha1-G/w86YqmypoJaeTSr3IUTFnBGTs=, tarball: https://registry.npm.qianxin-inc.cn/@esbuild/win32-ia32/download/@esbuild/win32-ia32-0.21.5.tgz}
+    engines: {node: '>=12'}
+    cpu: [ia32]
+    os: [win32]
+
+  '@esbuild/win32-x64@0.21.5':
+    resolution: {integrity: sha1-rK01HVgtFXuxRVNdsqb/U91RS1w=, tarball: https://registry.npm.qianxin-inc.cn/@esbuild/win32-x64/download/@esbuild/win32-x64-0.21.5.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [win32]
 
   '@eslint-community/eslint-utils@4.4.1':
     resolution: {integrity: sha1-0RRb8sIBMtZABJXW30v1k2L9nVY=, tarball: https://registry.npm.qianxin-inc.cn/@eslint-community/eslint-utils/download/@eslint-community/eslint-utils-4.4.1.tgz}
@@ -494,6 +656,111 @@ packages:
     resolution: {integrity: sha1-HsF+LtvsJcgwbUJOz78Tx94aqjE=, tarball: https://registry.npm.qianxin-inc.cn/@pkgr/core/download/@pkgr/core-0.1.1.tgz}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
+  '@rollup/rollup-android-arm-eabi@4.28.1':
+    resolution: {integrity: sha1-f0xNjNXMq26V1nUNvgAyHB8weR4=, tarball: https://registry.npm.qianxin-inc.cn/@rollup/rollup-android-arm-eabi/download/@rollup/rollup-android-arm-eabi-4.28.1.tgz}
+    cpu: [arm]
+    os: [android]
+
+  '@rollup/rollup-android-arm64@4.28.1':
+    resolution: {integrity: sha1-F+pxaV+xUYwsMkutvkMaC9GHny0=, tarball: https://registry.npm.qianxin-inc.cn/@rollup/rollup-android-arm64/download/@rollup/rollup-android-arm64-4.28.1.tgz}
+    cpu: [arm64]
+    os: [android]
+
+  '@rollup/rollup-darwin-arm64@4.28.1':
+    resolution: {integrity: sha1-2sDw0M+nPn1SJa5tMDwTyJeeeZk=, tarball: https://registry.npm.qianxin-inc.cn/@rollup/rollup-darwin-arm64/download/@rollup/rollup-darwin-arm64-4.28.1.tgz}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@rollup/rollup-darwin-x64@4.28.1':
+    resolution: {integrity: sha1-j2O6odMXhJBKOA0uKT+h3fU91KI=, tarball: https://registry.npm.qianxin-inc.cn/@rollup/rollup-darwin-x64/download/@rollup/rollup-darwin-x64-4.28.1.tgz}
+    cpu: [x64]
+    os: [darwin]
+
+  '@rollup/rollup-freebsd-arm64@4.28.1':
+    resolution: {integrity: sha1-MO0kfg326IWM3GrkCQ4S2+uM6UY=, tarball: https://registry.npm.qianxin-inc.cn/@rollup/rollup-freebsd-arm64/download/@rollup/rollup-freebsd-arm64-4.28.1.tgz}
+    cpu: [arm64]
+    os: [freebsd]
+
+  '@rollup/rollup-freebsd-x64@4.28.1':
+    resolution: {integrity: sha1-V4RvOC/du1CEEq4HhVuKBMj1YoI=, tarball: https://registry.npm.qianxin-inc.cn/@rollup/rollup-freebsd-x64/download/@rollup/rollup-freebsd-x64-4.28.1.tgz}
+    cpu: [x64]
+    os: [freebsd]
+
+  '@rollup/rollup-linux-arm-gnueabihf@4.28.1':
+    resolution: {integrity: sha1-N4ymZsna5eb5TR01HnSXwXbptt8=, tarball: https://registry.npm.qianxin-inc.cn/@rollup/rollup-linux-arm-gnueabihf/download/@rollup/rollup-linux-arm-gnueabihf-4.28.1.tgz}
+    cpu: [arm]
+    os: [linux]
+    libc: [glibc]
+
+  '@rollup/rollup-linux-arm-musleabihf@4.28.1':
+    resolution: {integrity: sha1-ppLv87qzMNXDOl1YE6CQwVN0zds=, tarball: https://registry.npm.qianxin-inc.cn/@rollup/rollup-linux-arm-musleabihf/download/@rollup/rollup-linux-arm-musleabihf-4.28.1.tgz}
+    cpu: [arm]
+    os: [linux]
+    libc: [musl]
+
+  '@rollup/rollup-linux-arm64-gnu@4.28.1':
+    resolution: {integrity: sha1-axcZt2CI2lrBrh/sz0jFkmuePbk=, tarball: https://registry.npm.qianxin-inc.cn/@rollup/rollup-linux-arm64-gnu/download/@rollup/rollup-linux-arm64-gnu-4.28.1.tgz}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  '@rollup/rollup-linux-arm64-musl@4.28.1':
+    resolution: {integrity: sha1-hluvW29f9nrLMuWjWVCIKOjcV4g=, tarball: https://registry.npm.qianxin-inc.cn/@rollup/rollup-linux-arm64-musl/download/@rollup/rollup-linux-arm64-musl-4.28.1.tgz}
+    cpu: [arm64]
+    os: [linux]
+    libc: [musl]
+
+  '@rollup/rollup-linux-loongarch64-gnu@4.28.1':
+    resolution: {integrity: sha1-I8Zgm6D3+np/IDi2tqCFVaUFWoc=, tarball: https://registry.npm.qianxin-inc.cn/@rollup/rollup-linux-loongarch64-gnu/download/@rollup/rollup-linux-loongarch64-gnu-4.28.1.tgz}
+    cpu: [loong64]
+    os: [linux]
+    libc: [glibc]
+
+  '@rollup/rollup-linux-powerpc64le-gnu@4.28.1':
+    resolution: {integrity: sha1-ZS7w2TNKnyW52vhXMSQoAcsPxBw=, tarball: https://registry.npm.qianxin-inc.cn/@rollup/rollup-linux-powerpc64le-gnu/download/@rollup/rollup-linux-powerpc64le-gnu-4.28.1.tgz}
+    cpu: [ppc64]
+    os: [linux]
+    libc: [glibc]
+
+  '@rollup/rollup-linux-riscv64-gnu@4.28.1':
+    resolution: {integrity: sha1-HrZlGDnubrymTWzGT+u9KZ6V5r0=, tarball: https://registry.npm.qianxin-inc.cn/@rollup/rollup-linux-riscv64-gnu/download/@rollup/rollup-linux-riscv64-gnu-4.28.1.tgz}
+    cpu: [riscv64]
+    os: [linux]
+    libc: [glibc]
+
+  '@rollup/rollup-linux-s390x-gnu@4.28.1':
+    resolution: {integrity: sha1-AVxSKTr7P/Kik88JNrHUOXXB6c0=, tarball: https://registry.npm.qianxin-inc.cn/@rollup/rollup-linux-s390x-gnu/download/@rollup/rollup-linux-s390x-gnu-4.28.1.tgz}
+    cpu: [s390x]
+    os: [linux]
+    libc: [glibc]
+
+  '@rollup/rollup-linux-x64-gnu@4.28.1':
+    resolution: {integrity: sha1-uDABtavtK8teLb7san5psZQjXB4=, tarball: https://registry.npm.qianxin-inc.cn/@rollup/rollup-linux-x64-gnu/download/@rollup/rollup-linux-x64-gnu-4.28.1.tgz}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  '@rollup/rollup-linux-x64-musl@4.28.1':
+    resolution: {integrity: sha1-bMfITNRWNzf4WT5m8ztX2OIogFs=, tarball: https://registry.npm.qianxin-inc.cn/@rollup/rollup-linux-x64-musl/download/@rollup/rollup-linux-x64-musl-4.28.1.tgz}
+    cpu: [x64]
+    os: [linux]
+    libc: [musl]
+
+  '@rollup/rollup-win32-arm64-msvc@4.28.1':
+    resolution: {integrity: sha1-Yx/+7glNcSefzR/oByvc8lMRvBE=, tarball: https://registry.npm.qianxin-inc.cn/@rollup/rollup-win32-arm64-msvc/download/@rollup/rollup-win32-arm64-msvc-4.28.1.tgz}
+    cpu: [arm64]
+    os: [win32]
+
+  '@rollup/rollup-win32-ia32-msvc@4.28.1':
+    resolution: {integrity: sha1-BtHWDVufcY6KbEpD+C4/njJUWH8=, tarball: https://registry.npm.qianxin-inc.cn/@rollup/rollup-win32-ia32-msvc/download/@rollup/rollup-win32-ia32-msvc-4.28.1.tgz}
+    cpu: [ia32]
+    os: [win32]
+
+  '@rollup/rollup-win32-x64-msvc@4.28.1':
+    resolution: {integrity: sha1-Tf9cQlnr5sW0qPLFvDgpt6hEf/A=, tarball: https://registry.npm.qianxin-inc.cn/@rollup/rollup-win32-x64-msvc/download/@rollup/rollup-win32-x64-msvc-4.28.1.tgz}
+    cpu: [x64]
+    os: [win32]
+
   '@sinclair/typebox@0.27.8':
     resolution: {integrity: sha1-Zmf6wWxDa1Q0o4ejTe2wExmPbm4=, tarball: https://registry.npm.qianxin-inc.cn/@sinclair/typebox/download/@sinclair/typebox-0.27.8.tgz}
 
@@ -672,6 +939,65 @@ packages:
   '@ungap/structured-clone@1.2.1':
     resolution: {integrity: sha1-KPoYX2far3t6GowdRFEyxdl5+L0=, tarball: https://registry.npm.qianxin-inc.cn/@ungap/structured-clone/download/@ungap/structured-clone-1.2.1.tgz}
 
+  '@vitejs/plugin-vue@5.2.1':
+    resolution: {integrity: sha1-0UkfZ47jr4mfeuV9nCHcUqZccTM=, tarball: https://registry.npm.qianxin-inc.cn/@vitejs/plugin-vue/download/@vitejs/plugin-vue-5.2.1.tgz}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    peerDependencies:
+      vite: ^5.0.0 || ^6.0.0
+      vue: ^3.2.25
+
+  '@volar/language-core@2.4.11':
+    resolution: {integrity: sha1-2VqexPFPvbQaamT58yHRHSOlKRw=, tarball: https://registry.npm.qianxin-inc.cn/@volar/language-core/download/@volar/language-core-2.4.11.tgz}
+
+  '@volar/source-map@2.4.11':
+    resolution: {integrity: sha1-WHbUUxUIEpckwnVeKV2x35i9WJU=, tarball: https://registry.npm.qianxin-inc.cn/@volar/source-map/download/@volar/source-map-2.4.11.tgz}
+
+  '@volar/typescript@2.4.11':
+    resolution: {integrity: sha1-qvv6QTM3ZU2yEb9Nj7ZnDIn2+lc=, tarball: https://registry.npm.qianxin-inc.cn/@volar/typescript/download/@volar/typescript-2.4.11.tgz}
+
+  '@vue/compiler-core@3.5.13':
+    resolution: {integrity: sha1-sK5sQ0f2DAPoSaBdNOW/dHyb2gU=, tarball: https://registry.npm.qianxin-inc.cn/@vue/compiler-core/download/@vue/compiler-core-3.5.13.tgz}
+
+  '@vue/compiler-dom@3.5.13':
+    resolution: {integrity: sha1-uxuHWNvFQrNljdqXO5ihyTEailg=, tarball: https://registry.npm.qianxin-inc.cn/@vue/compiler-dom/download/@vue/compiler-dom-3.5.13.tgz}
+
+  '@vue/compiler-sfc@3.5.13':
+    resolution: {integrity: sha1-Rh+L00O1wG+sQYnE/vivMt6oK0Y=, tarball: https://registry.npm.qianxin-inc.cn/@vue/compiler-sfc/download/@vue/compiler-sfc-3.5.13.tgz}
+
+  '@vue/compiler-ssr@3.5.13':
+    resolution: {integrity: sha1-53GtzKbT0AD5GkJ3yXKpltB/Q7o=, tarball: https://registry.npm.qianxin-inc.cn/@vue/compiler-ssr/download/@vue/compiler-ssr-3.5.13.tgz}
+
+  '@vue/compiler-vue2@2.7.16':
+    resolution: {integrity: sha1-K6g3y9PxszwryGX74aO1P7YR4kk=, tarball: https://registry.npm.qianxin-inc.cn/@vue/compiler-vue2/download/@vue/compiler-vue2-2.7.16.tgz}
+
+  '@vue/devtools-api@6.6.4':
+    resolution: {integrity: sha1-y+l/4BYrNl7cHbqA4XP5BJJTU0M=, tarball: https://registry.npm.qianxin-inc.cn/@vue/devtools-api/download/@vue/devtools-api-6.6.4.tgz}
+
+  '@vue/language-core@2.1.10':
+    resolution: {integrity: sha1-WYjp6hVfPgnMu7OyoN3VMNrZEuY=, tarball: https://registry.npm.qianxin-inc.cn/@vue/language-core/download/@vue/language-core-2.1.10.tgz}
+    peerDependencies:
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
+  '@vue/reactivity@3.5.13':
+    resolution: {integrity: sha1-tB/yu4ZeCTiZoiIZ9bJfl7b+FV8=, tarball: https://registry.npm.qianxin-inc.cn/@vue/reactivity/download/@vue/reactivity-3.5.13.tgz}
+
+  '@vue/runtime-core@3.5.13':
+    resolution: {integrity: sha1-H6+kvwuXrw692dv+mM1jDaNjpFU=, tarball: https://registry.npm.qianxin-inc.cn/@vue/runtime-core/download/@vue/runtime-core-3.5.13.tgz}
+
+  '@vue/runtime-dom@3.5.13':
+    resolution: {integrity: sha1-YQ/Hld6SRjAOiuiGWTDVNOEkYhU=, tarball: https://registry.npm.qianxin-inc.cn/@vue/runtime-dom/download/@vue/runtime-dom-3.5.13.tgz}
+
+  '@vue/server-renderer@3.5.13':
+    resolution: {integrity: sha1-Qp6tYu5R3niWRsIu/pCOSJqtRvc=, tarball: https://registry.npm.qianxin-inc.cn/@vue/server-renderer/download/@vue/server-renderer-3.5.13.tgz}
+    peerDependencies:
+      vue: 3.5.13
+
+  '@vue/shared@3.5.13':
+    resolution: {integrity: sha1-h7MJpjecIrkm5paJMjeCb2Qzm28=, tarball: https://registry.npm.qianxin-inc.cn/@vue/shared/download/@vue/shared-3.5.13.tgz}
+
   '@webassemblyjs/ast@1.14.1':
     resolution: {integrity: sha1-qfagfysDyVyNOMRTah/ftSH/VbY=, tarball: https://registry.npm.qianxin-inc.cn/@webassemblyjs/ast/download/@webassemblyjs/ast-1.14.1.tgz}
 
@@ -764,6 +1090,9 @@ packages:
 
   ajv@8.12.0:
     resolution: {integrity: sha1-0aBScyPiL1NWLFZ8AJkVd9++GdE=, tarball: https://registry.npm.qianxin-inc.cn/ajv/download/ajv-8.12.0.tgz}
+
+  alien-signals@0.2.2:
+    resolution: {integrity: sha1-Q50Js2PcTWCcD2zmk2Lc4GjSMZc=, tarball: https://registry.npm.qianxin-inc.cn/alien-signals/download/alien-signals-0.2.2.tgz}
 
   ansi-colors@4.1.3:
     resolution: {integrity: sha1-N2ETQOsiQ+cMxgTK011jJw1IeBs=, tarball: https://registry.npm.qianxin-inc.cn/ansi-colors/download/ansi-colors-4.1.3.tgz}
@@ -1086,6 +1415,12 @@ packages:
     resolution: {integrity: sha1-ilj+ePANzXDDcEUXWd+/rwPo7p8=, tarball: https://registry.npm.qianxin-inc.cn/cross-spawn/download/cross-spawn-7.0.6.tgz}
     engines: {node: '>= 8'}
 
+  csstype@3.1.3:
+    resolution: {integrity: sha1-2A/ylNEU+w5qxQD7+FtgE31+/4E=, tarball: https://registry.npm.qianxin-inc.cn/csstype/download/csstype-3.1.3.tgz}
+
+  de-indent@1.0.2:
+    resolution: {integrity: sha1-sgOOhG3DO6pXlhKNCAS0VbjB4h0=, tarball: https://registry.npm.qianxin-inc.cn/de-indent/download/de-indent-1.0.2.tgz}
+
   debug@2.6.9:
     resolution: {integrity: sha1-XRKFFd8TT/Mn6QpMk/Tgd6U2NB8=, tarball: https://registry.npm.qianxin-inc.cn/debug/download/debug-2.6.9.tgz}
     peerDependencies:
@@ -1196,6 +1531,10 @@ packages:
     resolution: {integrity: sha1-Z7+7zC+B1RG+d9aGqQJn73+JihU=, tarball: https://registry.npm.qianxin-inc.cn/enhanced-resolve/download/enhanced-resolve-5.17.1.tgz}
     engines: {node: '>=10.13.0'}
 
+  entities@4.5.0:
+    resolution: {integrity: sha1-XSaOpecRPsdMTQM7eepaNaSI+0g=, tarball: https://registry.npm.qianxin-inc.cn/entities/download/entities-4.5.0.tgz}
+    engines: {node: '>=0.12'}
+
   error-ex@1.3.2:
     resolution: {integrity: sha1-tKxAZIEH/c3PriQvQovqihTU8b8=, tarball: https://registry.npm.qianxin-inc.cn/error-ex/download/error-ex-1.3.2.tgz}
 
@@ -1213,6 +1552,11 @@ packages:
   es-object-atoms@1.0.0:
     resolution: {integrity: sha1-3bVc1HrC4kBwEmC8Ko4x7LZD2UE=, tarball: https://registry.npm.qianxin-inc.cn/es-object-atoms/download/es-object-atoms-1.0.0.tgz}
     engines: {node: '>= 0.4'}
+
+  esbuild@0.21.5:
+    resolution: {integrity: sha1-nKMBsSCSKVm3ZjYNisgw2g0CmX0=, tarball: https://registry.npm.qianxin-inc.cn/esbuild/download/esbuild-0.21.5.tgz}
+    engines: {node: '>=12'}
+    hasBin: true
 
   escalade@3.2.0:
     resolution: {integrity: sha1-ARo/aYVroYnf+n3I/M6Z0qh5A+U=, tarball: https://registry.npm.qianxin-inc.cn/escalade/download/escalade-3.2.0.tgz}
@@ -1299,6 +1643,9 @@ packages:
   estraverse@5.3.0:
     resolution: {integrity: sha1-LupSkHAvJquP5TcDcP+GyWXSESM=, tarball: https://registry.npm.qianxin-inc.cn/estraverse/download/estraverse-5.3.0.tgz}
     engines: {node: '>=4.0'}
+
+  estree-walker@2.0.2:
+    resolution: {integrity: sha1-UvAQF4wqTBF6d1fP6UKtt9LaTKw=, tarball: https://registry.npm.qianxin-inc.cn/estree-walker/download/estree-walker-2.0.2.tgz}
 
   esutils@2.0.3:
     resolution: {integrity: sha1-dNLrTeC42hKTcRkQ1Qd1ubcQ72Q=, tarball: https://registry.npm.qianxin-inc.cn/esutils/download/esutils-2.0.3.tgz}
@@ -1523,6 +1870,10 @@ packages:
   hasown@2.0.2:
     resolution: {integrity: sha1-AD6vkb563DcuhOxZ3DclLO24AAM=, tarball: https://registry.npm.qianxin-inc.cn/hasown/download/hasown-2.0.2.tgz}
     engines: {node: '>= 0.4'}
+
+  he@1.2.0:
+    resolution: {integrity: sha1-hK5l+n6vsWX922FWauFLrwVmTw8=, tarball: https://registry.npm.qianxin-inc.cn/he/download/he-1.2.0.tgz}
+    hasBin: true
 
   hexoid@1.0.0:
     resolution: {integrity: sha1-rRDGVz+5B94j2exjpxEmfZ3JvBg=, tarball: https://registry.npm.qianxin-inc.cn/hexoid/download/hexoid-1.0.0.tgz}
@@ -1906,6 +2257,9 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha1-HaJ+ZxAnGUdpXa9oSOhH8B2EuSA=, tarball: https://registry.npm.qianxin-inc.cn/lru-cache/download/lru-cache-5.1.1.tgz}
 
+  magic-string@0.30.17:
+    resolution: {integrity: sha1-RQpElnPSRg5bvPupphkWoXFMdFM=, tarball: https://registry.npm.qianxin-inc.cn/magic-string/download/magic-string-0.30.17.tgz}
+
   magic-string@0.30.5:
     resolution: {integrity: sha1-GZTZgL0ciDXcbnjbfL1K5PJHRvk=, tarball: https://registry.npm.qianxin-inc.cn/magic-string/download/magic-string-0.30.5.tgz}
     engines: {node: '>=12'}
@@ -2012,6 +2366,9 @@ packages:
   ms@2.1.3:
     resolution: {integrity: sha1-V0yBOM4dK1hh8LRFedut1gxmFbI=, tarball: https://registry.npm.qianxin-inc.cn/ms/download/ms-2.1.3.tgz}
 
+  muggle-string@0.4.1:
+    resolution: {integrity: sha1-OzZr1Dsy+AncIGWVNN0w58ig0yg=, tarball: https://registry.npm.qianxin-inc.cn/muggle-string/download/muggle-string-0.4.1.tgz}
+
   multer@1.4.4-lts.1:
     resolution: {integrity: sha1-JBAPcBpGESEc+ulK4W6jm7MU4E0=, tarball: https://registry.npm.qianxin-inc.cn/multer/download/multer-1.4.4-lts.1.tgz}
     engines: {node: '>= 6.0.0'}
@@ -2022,6 +2379,11 @@ packages:
   mute-stream@1.0.0:
     resolution: {integrity: sha1-4xvZ/mLwrtI1IKpDJOpmcVMeAT4=, tarball: https://registry.npm.qianxin-inc.cn/mute-stream/download/mute-stream-1.0.0.tgz}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
+
+  nanoid@3.3.8:
+    resolution: {integrity: sha1-sb4wML7jaq/xi6yzdeXM5SFoS68=, tarball: https://registry.npm.qianxin-inc.cn/nanoid/download/nanoid-3.3.8.tgz}
+    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
+    hasBin: true
 
   natural-compare@1.4.0:
     resolution: {integrity: sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=, tarball: https://registry.npm.qianxin-inc.cn/natural-compare/download/natural-compare-1.4.0.tgz}
@@ -2125,6 +2487,9 @@ packages:
     resolution: {integrity: sha1-naGee+6NEt/wUT7Vt2lXeTvC6NQ=, tarball: https://registry.npm.qianxin-inc.cn/parseurl/download/parseurl-1.3.3.tgz}
     engines: {node: '>= 0.8'}
 
+  path-browserify@1.0.1:
+    resolution: {integrity: sha1-2YRUqcN1PVeQhg8W9ohnueRr4f0=, tarball: https://registry.npm.qianxin-inc.cn/path-browserify/download/path-browserify-1.0.1.tgz}
+
   path-exists@4.0.0:
     resolution: {integrity: sha1-UTvb4tO5XXdi6METfvoZXGxhtbM=, tarball: https://registry.npm.qianxin-inc.cn/path-exists/download/path-exists-4.0.0.tgz}
     engines: {node: '>=8'}
@@ -2176,6 +2541,10 @@ packages:
   pluralize@8.0.0:
     resolution: {integrity: sha1-Gm+hajjRKhkB4DIPoBcFHFOc47E=, tarball: https://registry.npm.qianxin-inc.cn/pluralize/download/pluralize-8.0.0.tgz}
     engines: {node: '>=4'}
+
+  postcss@8.4.49:
+    resolution: {integrity: sha1-TqR5BIqwWas65h0IIZD6v9mU/hk=, tarball: https://registry.npm.qianxin-inc.cn/postcss/download/postcss-8.4.49.tgz}
+    engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
     resolution: {integrity: sha1-3rxkidem5rDnYRiIzsiAM30xY5Y=, tarball: https://registry.npm.qianxin-inc.cn/prelude-ls/download/prelude-ls-1.2.1.tgz}
@@ -2310,6 +2679,11 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
+  rollup@4.28.1:
+    resolution: {integrity: sha1-dxi6NNYrRJ38Sa2/0vMStP4N9N4=, tarball: https://registry.npm.qianxin-inc.cn/rollup/download/rollup-4.28.1.tgz}
+    engines: {node: '>=18.0.0', npm: '>=8.0.0'}
+    hasBin: true
+
   run-async@2.4.1:
     resolution: {integrity: sha1-hEDsz5nqPnC9QJ1JqriOEMGJpFU=, tarball: https://registry.npm.qianxin-inc.cn/run-async/download/run-async-2.4.1.tgz}
     engines: {node: '>=0.12.0'}
@@ -2406,6 +2780,10 @@ packages:
   slash@3.0.0:
     resolution: {integrity: sha1-ZTm+hwwWWtvVJAIg2+Nh8bxNRjQ=, tarball: https://registry.npm.qianxin-inc.cn/slash/download/slash-3.0.0.tgz}
     engines: {node: '>=8'}
+
+  source-map-js@1.2.1:
+    resolution: {integrity: sha1-HOVlD93YerwJnto33P8CTCZnrkY=, tarball: https://registry.npm.qianxin-inc.cn/source-map-js/download/source-map-js-1.2.1.tgz}
+    engines: {node: '>=0.10.0'}
 
   source-map-support@0.5.13:
     resolution: {integrity: sha1-MbJKnC5zwt6FBmwP631Edn7VKTI=, tarball: https://registry.npm.qianxin-inc.cn/source-map-support/download/source-map-support-0.5.13.tgz}
@@ -2660,6 +3038,11 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
+  typescript@5.6.3:
+    resolution: {integrity: sha1-XzRJ4xydlP67F94DzAgd1W2B21s=, tarball: https://registry.npm.qianxin-inc.cn/typescript/download/typescript-5.6.3.tgz}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
   typescript@5.7.2:
     resolution: {integrity: sha1-MWnPjEyKgozeU7qeyz0rHV3We+Y=, tarball: https://registry.npm.qianxin-inc.cn/typescript/download/typescript-5.7.2.tgz}
     engines: {node: '>=14.17'}
@@ -2706,6 +3089,59 @@ packages:
   vary@1.1.2:
     resolution: {integrity: sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=, tarball: https://registry.npm.qianxin-inc.cn/vary/download/vary-1.1.2.tgz}
     engines: {node: '>= 0.8'}
+
+  vite@5.4.11:
+    resolution: {integrity: sha1-O0Fc1K7XgaNWwd5anrr7g3cV9uU=, tarball: https://registry.npm.qianxin-inc.cn/vite/download/vite-5.4.11.tgz}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': ^18.0.0 || >=20.0.0
+      less: '*'
+      lightningcss: ^1.21.0
+      sass: '*'
+      sass-embedded: '*'
+      stylus: '*'
+      sugarss: '*'
+      terser: ^5.4.0
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      less:
+        optional: true
+      lightningcss:
+        optional: true
+      sass:
+        optional: true
+      sass-embedded:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+
+  vscode-uri@3.0.8:
+    resolution: {integrity: sha1-F3CTjT5yWIZZoXLQ/UZCeACD/58=, tarball: https://registry.npm.qianxin-inc.cn/vscode-uri/download/vscode-uri-3.0.8.tgz}
+
+  vue-router@4.5.0:
+    resolution: {integrity: sha1-WPxf43ThC2AY+RAyj3VsPa4IHxQ=, tarball: https://registry.npm.qianxin-inc.cn/vue-router/download/vue-router-4.5.0.tgz}
+    peerDependencies:
+      vue: ^3.2.0
+
+  vue-tsc@2.1.10:
+    resolution: {integrity: sha1-TWGmTl+tdjuLQMGIQln9SJhvC04=, tarball: https://registry.npm.qianxin-inc.cn/vue-tsc/download/vue-tsc-2.1.10.tgz}
+    hasBin: true
+    peerDependencies:
+      typescript: '>=5.0.0'
+
+  vue@3.5.13:
+    resolution: {integrity: sha1-n3YKGpgrCcDASoZ5A/wznJ8p7Ao=, tarball: https://registry.npm.qianxin-inc.cn/vue/download/vue-3.5.13.tgz}
+    peerDependencies:
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   walker@1.0.8:
     resolution: {integrity: sha1-vUmNtHev5XPcBBhfAR06uKjXZT8=, tarball: https://registry.npm.qianxin-inc.cn/walker/download/walker-1.0.8.tgz}
@@ -3014,6 +3450,75 @@ snapshots:
     dependencies:
       '@jridgewell/trace-mapping': 0.3.9
 
+  '@esbuild/aix-ppc64@0.21.5':
+    optional: true
+
+  '@esbuild/android-arm64@0.21.5':
+    optional: true
+
+  '@esbuild/android-arm@0.21.5':
+    optional: true
+
+  '@esbuild/android-x64@0.21.5':
+    optional: true
+
+  '@esbuild/darwin-arm64@0.21.5':
+    optional: true
+
+  '@esbuild/darwin-x64@0.21.5':
+    optional: true
+
+  '@esbuild/freebsd-arm64@0.21.5':
+    optional: true
+
+  '@esbuild/freebsd-x64@0.21.5':
+    optional: true
+
+  '@esbuild/linux-arm64@0.21.5':
+    optional: true
+
+  '@esbuild/linux-arm@0.21.5':
+    optional: true
+
+  '@esbuild/linux-ia32@0.21.5':
+    optional: true
+
+  '@esbuild/linux-loong64@0.21.5':
+    optional: true
+
+  '@esbuild/linux-mips64el@0.21.5':
+    optional: true
+
+  '@esbuild/linux-ppc64@0.21.5':
+    optional: true
+
+  '@esbuild/linux-riscv64@0.21.5':
+    optional: true
+
+  '@esbuild/linux-s390x@0.21.5':
+    optional: true
+
+  '@esbuild/linux-x64@0.21.5':
+    optional: true
+
+  '@esbuild/netbsd-x64@0.21.5':
+    optional: true
+
+  '@esbuild/openbsd-x64@0.21.5':
+    optional: true
+
+  '@esbuild/sunos-x64@0.21.5':
+    optional: true
+
+  '@esbuild/win32-arm64@0.21.5':
+    optional: true
+
+  '@esbuild/win32-ia32@0.21.5':
+    optional: true
+
+  '@esbuild/win32-x64@0.21.5':
+    optional: true
+
   '@eslint-community/eslint-utils@4.4.1(eslint@8.57.1)':
     dependencies:
       eslint: 8.57.1
@@ -3077,7 +3582,7 @@ snapshots:
       jest-util: 29.7.0
       slash: 3.0.0
 
-  '@jest/core@29.7.0(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2))':
+  '@jest/core@29.7.0(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.3.3))':
     dependencies:
       '@jest/console': 29.7.0
       '@jest/reporters': 29.7.0
@@ -3091,7 +3596,7 @@ snapshots:
       exit: 0.1.2
       graceful-fs: 4.2.11
       jest-changed-files: 29.7.0
-      jest-config: 29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2))
+      jest-config: 29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.3.3))
       jest-haste-map: 29.7.0
       jest-message-util: 29.7.0
       jest-regex-util: 29.6.3
@@ -3339,17 +3844,6 @@ snapshots:
     transitivePeerDependencies:
       - chokidar
 
-  '@nestjs/schematics@10.1.1(chokidar@3.6.0)(typescript@5.7.2)':
-    dependencies:
-      '@angular-devkit/core': 17.1.2(chokidar@3.6.0)
-      '@angular-devkit/schematics': 17.1.2(chokidar@3.6.0)
-      comment-json: 4.2.3
-      jsonc-parser: 3.2.1
-      pluralize: 8.0.0
-      typescript: 5.7.2
-    transitivePeerDependencies:
-      - chokidar
-
   '@nestjs/testing@10.3.3(@nestjs/common@10.4.7(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.7(@nestjs/common@10.4.7(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/platform-express@10.3.3)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/platform-express@10.3.3(@nestjs/common@10.4.7(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.7))':
     dependencies:
       '@nestjs/common': 10.4.7(reflect-metadata@0.2.2)(rxjs@7.8.1)
@@ -3382,6 +3876,63 @@ snapshots:
     optional: true
 
   '@pkgr/core@0.1.1': {}
+
+  '@rollup/rollup-android-arm-eabi@4.28.1':
+    optional: true
+
+  '@rollup/rollup-android-arm64@4.28.1':
+    optional: true
+
+  '@rollup/rollup-darwin-arm64@4.28.1':
+    optional: true
+
+  '@rollup/rollup-darwin-x64@4.28.1':
+    optional: true
+
+  '@rollup/rollup-freebsd-arm64@4.28.1':
+    optional: true
+
+  '@rollup/rollup-freebsd-x64@4.28.1':
+    optional: true
+
+  '@rollup/rollup-linux-arm-gnueabihf@4.28.1':
+    optional: true
+
+  '@rollup/rollup-linux-arm-musleabihf@4.28.1':
+    optional: true
+
+  '@rollup/rollup-linux-arm64-gnu@4.28.1':
+    optional: true
+
+  '@rollup/rollup-linux-arm64-musl@4.28.1':
+    optional: true
+
+  '@rollup/rollup-linux-loongarch64-gnu@4.28.1':
+    optional: true
+
+  '@rollup/rollup-linux-powerpc64le-gnu@4.28.1':
+    optional: true
+
+  '@rollup/rollup-linux-riscv64-gnu@4.28.1':
+    optional: true
+
+  '@rollup/rollup-linux-s390x-gnu@4.28.1':
+    optional: true
+
+  '@rollup/rollup-linux-x64-gnu@4.28.1':
+    optional: true
+
+  '@rollup/rollup-linux-x64-musl@4.28.1':
+    optional: true
+
+  '@rollup/rollup-win32-arm64-msvc@4.28.1':
+    optional: true
+
+  '@rollup/rollup-win32-ia32-msvc@4.28.1':
+    optional: true
+
+  '@rollup/rollup-win32-x64-msvc@4.28.1':
+    optional: true
 
   '@sinclair/typebox@0.27.8': {}
 
@@ -3526,13 +4077,13 @@ snapshots:
     dependencies:
       '@types/yargs-parser': 21.0.3
 
-  '@typescript-eslint/eslint-plugin@6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1)(typescript@5.7.2)':
+  '@typescript-eslint/eslint-plugin@6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.3.3))(eslint@8.57.1)(typescript@5.3.3)':
     dependencies:
       '@eslint-community/regexpp': 4.12.1
-      '@typescript-eslint/parser': 6.21.0(eslint@8.57.1)(typescript@5.7.2)
+      '@typescript-eslint/parser': 6.21.0(eslint@8.57.1)(typescript@5.3.3)
       '@typescript-eslint/scope-manager': 6.21.0
-      '@typescript-eslint/type-utils': 6.21.0(eslint@8.57.1)(typescript@5.7.2)
-      '@typescript-eslint/utils': 6.21.0(eslint@8.57.1)(typescript@5.7.2)
+      '@typescript-eslint/type-utils': 6.21.0(eslint@8.57.1)(typescript@5.3.3)
+      '@typescript-eslint/utils': 6.21.0(eslint@8.57.1)(typescript@5.3.3)
       '@typescript-eslint/visitor-keys': 6.21.0
       debug: 4.4.0
       eslint: 8.57.1
@@ -3540,22 +4091,22 @@ snapshots:
       ignore: 5.3.2
       natural-compare: 1.4.0
       semver: 7.6.3
-      ts-api-utils: 1.4.3(typescript@5.7.2)
+      ts-api-utils: 1.4.3(typescript@5.3.3)
     optionalDependencies:
-      typescript: 5.7.2
+      typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.7.2)':
+  '@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.3.3)':
     dependencies:
       '@typescript-eslint/scope-manager': 6.21.0
       '@typescript-eslint/types': 6.21.0
-      '@typescript-eslint/typescript-estree': 6.21.0(typescript@5.7.2)
+      '@typescript-eslint/typescript-estree': 6.21.0(typescript@5.3.3)
       '@typescript-eslint/visitor-keys': 6.21.0
       debug: 4.4.0
       eslint: 8.57.1
     optionalDependencies:
-      typescript: 5.7.2
+      typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
 
@@ -3564,21 +4115,21 @@ snapshots:
       '@typescript-eslint/types': 6.21.0
       '@typescript-eslint/visitor-keys': 6.21.0
 
-  '@typescript-eslint/type-utils@6.21.0(eslint@8.57.1)(typescript@5.7.2)':
+  '@typescript-eslint/type-utils@6.21.0(eslint@8.57.1)(typescript@5.3.3)':
     dependencies:
-      '@typescript-eslint/typescript-estree': 6.21.0(typescript@5.7.2)
-      '@typescript-eslint/utils': 6.21.0(eslint@8.57.1)(typescript@5.7.2)
+      '@typescript-eslint/typescript-estree': 6.21.0(typescript@5.3.3)
+      '@typescript-eslint/utils': 6.21.0(eslint@8.57.1)(typescript@5.3.3)
       debug: 4.4.0
       eslint: 8.57.1
-      ts-api-utils: 1.4.3(typescript@5.7.2)
+      ts-api-utils: 1.4.3(typescript@5.3.3)
     optionalDependencies:
-      typescript: 5.7.2
+      typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
 
   '@typescript-eslint/types@6.21.0': {}
 
-  '@typescript-eslint/typescript-estree@6.21.0(typescript@5.7.2)':
+  '@typescript-eslint/typescript-estree@6.21.0(typescript@5.3.3)':
     dependencies:
       '@typescript-eslint/types': 6.21.0
       '@typescript-eslint/visitor-keys': 6.21.0
@@ -3587,20 +4138,20 @@ snapshots:
       is-glob: 4.0.3
       minimatch: 9.0.3
       semver: 7.6.3
-      ts-api-utils: 1.4.3(typescript@5.7.2)
+      ts-api-utils: 1.4.3(typescript@5.3.3)
     optionalDependencies:
-      typescript: 5.7.2
+      typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/utils@6.21.0(eslint@8.57.1)(typescript@5.7.2)':
+  '@typescript-eslint/utils@6.21.0(eslint@8.57.1)(typescript@5.3.3)':
     dependencies:
       '@eslint-community/eslint-utils': 4.4.1(eslint@8.57.1)
       '@types/json-schema': 7.0.15
       '@types/semver': 7.5.8
       '@typescript-eslint/scope-manager': 6.21.0
       '@typescript-eslint/types': 6.21.0
-      '@typescript-eslint/typescript-estree': 6.21.0(typescript@5.7.2)
+      '@typescript-eslint/typescript-estree': 6.21.0(typescript@5.3.3)
       eslint: 8.57.1
       semver: 7.6.3
     transitivePeerDependencies:
@@ -3613,6 +4164,97 @@ snapshots:
       eslint-visitor-keys: 3.4.3
 
   '@ungap/structured-clone@1.2.1': {}
+
+  '@vitejs/plugin-vue@5.2.1(vite@5.4.11(@types/node@20.17.10)(terser@5.34.1))(vue@3.5.13(typescript@5.7.2))':
+    dependencies:
+      vite: 5.4.11(@types/node@20.17.10)(terser@5.34.1)
+      vue: 3.5.13(typescript@5.7.2)
+
+  '@volar/language-core@2.4.11':
+    dependencies:
+      '@volar/source-map': 2.4.11
+
+  '@volar/source-map@2.4.11': {}
+
+  '@volar/typescript@2.4.11':
+    dependencies:
+      '@volar/language-core': 2.4.11
+      path-browserify: 1.0.1
+      vscode-uri: 3.0.8
+
+  '@vue/compiler-core@3.5.13':
+    dependencies:
+      '@babel/parser': 7.26.3
+      '@vue/shared': 3.5.13
+      entities: 4.5.0
+      estree-walker: 2.0.2
+      source-map-js: 1.2.1
+
+  '@vue/compiler-dom@3.5.13':
+    dependencies:
+      '@vue/compiler-core': 3.5.13
+      '@vue/shared': 3.5.13
+
+  '@vue/compiler-sfc@3.5.13':
+    dependencies:
+      '@babel/parser': 7.26.3
+      '@vue/compiler-core': 3.5.13
+      '@vue/compiler-dom': 3.5.13
+      '@vue/compiler-ssr': 3.5.13
+      '@vue/shared': 3.5.13
+      estree-walker: 2.0.2
+      magic-string: 0.30.17
+      postcss: 8.4.49
+      source-map-js: 1.2.1
+
+  '@vue/compiler-ssr@3.5.13':
+    dependencies:
+      '@vue/compiler-dom': 3.5.13
+      '@vue/shared': 3.5.13
+
+  '@vue/compiler-vue2@2.7.16':
+    dependencies:
+      de-indent: 1.0.2
+      he: 1.2.0
+
+  '@vue/devtools-api@6.6.4': {}
+
+  '@vue/language-core@2.1.10(typescript@5.7.2)':
+    dependencies:
+      '@volar/language-core': 2.4.11
+      '@vue/compiler-dom': 3.5.13
+      '@vue/compiler-vue2': 2.7.16
+      '@vue/shared': 3.5.13
+      alien-signals: 0.2.2
+      minimatch: 9.0.5
+      muggle-string: 0.4.1
+      path-browserify: 1.0.1
+    optionalDependencies:
+      typescript: 5.7.2
+
+  '@vue/reactivity@3.5.13':
+    dependencies:
+      '@vue/shared': 3.5.13
+
+  '@vue/runtime-core@3.5.13':
+    dependencies:
+      '@vue/reactivity': 3.5.13
+      '@vue/shared': 3.5.13
+
+  '@vue/runtime-dom@3.5.13':
+    dependencies:
+      '@vue/reactivity': 3.5.13
+      '@vue/runtime-core': 3.5.13
+      '@vue/shared': 3.5.13
+      csstype: 3.1.3
+
+  '@vue/server-renderer@3.5.13(vue@3.5.13(typescript@5.7.2))':
+    dependencies:
+      '@vue/compiler-ssr': 3.5.13
+      '@vue/shared': 3.5.13
+      vue: 3.5.13(typescript@5.7.2)
+
+  '@vue/shared@3.5.13': {}
 
   '@webassemblyjs/ast@1.14.1':
     dependencies:
@@ -3734,6 +4376,8 @@ snapshots:
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
       uri-js: 4.4.1
+
+  alien-signals@0.2.2: {}
 
   ansi-colors@4.1.3: {}
 
@@ -4066,13 +4710,13 @@ snapshots:
     optionalDependencies:
       typescript: 5.3.3
 
-  create-jest@29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2)):
+  create-jest@29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.3.3)):
     dependencies:
       '@jest/types': 29.6.3
       chalk: 4.1.2
       exit: 0.1.2
       graceful-fs: 4.2.11
-      jest-config: 29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2))
+      jest-config: 29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.3.3))
       jest-util: 29.7.0
       prompts: 2.4.2
     transitivePeerDependencies:
@@ -4088,6 +4732,10 @@ snapshots:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
+
+  csstype@3.1.3: {}
+
+  de-indent@1.0.2: {}
 
   debug@2.6.9:
     dependencies:
@@ -4167,6 +4815,8 @@ snapshots:
       graceful-fs: 4.2.11
       tapable: 2.2.1
 
+  entities@4.5.0: {}
+
   error-ex@1.3.2:
     dependencies:
       is-arrayish: 0.2.1
@@ -4180,6 +4830,32 @@ snapshots:
   es-object-atoms@1.0.0:
     dependencies:
       es-errors: 1.3.0
+
+  esbuild@0.21.5:
+    optionalDependencies:
+      '@esbuild/aix-ppc64': 0.21.5
+      '@esbuild/android-arm': 0.21.5
+      '@esbuild/android-arm64': 0.21.5
+      '@esbuild/android-x64': 0.21.5
+      '@esbuild/darwin-arm64': 0.21.5
+      '@esbuild/darwin-x64': 0.21.5
+      '@esbuild/freebsd-arm64': 0.21.5
+      '@esbuild/freebsd-x64': 0.21.5
+      '@esbuild/linux-arm': 0.21.5
+      '@esbuild/linux-arm64': 0.21.5
+      '@esbuild/linux-ia32': 0.21.5
+      '@esbuild/linux-loong64': 0.21.5
+      '@esbuild/linux-mips64el': 0.21.5
+      '@esbuild/linux-ppc64': 0.21.5
+      '@esbuild/linux-riscv64': 0.21.5
+      '@esbuild/linux-s390x': 0.21.5
+      '@esbuild/linux-x64': 0.21.5
+      '@esbuild/netbsd-x64': 0.21.5
+      '@esbuild/openbsd-x64': 0.21.5
+      '@esbuild/sunos-x64': 0.21.5
+      '@esbuild/win32-arm64': 0.21.5
+      '@esbuild/win32-ia32': 0.21.5
+      '@esbuild/win32-x64': 0.21.5
 
   escalade@3.2.0: {}
 
@@ -4281,6 +4957,8 @@ snapshots:
   estraverse@4.3.0: {}
 
   estraverse@5.3.0: {}
+
+  estree-walker@2.0.2: {}
 
   esutils@2.0.3: {}
 
@@ -4573,6 +5251,8 @@ snapshots:
     dependencies:
       function-bind: 1.1.2
 
+  he@1.2.0: {}
+
   hexoid@1.0.0: {}
 
   html-escaper@2.0.2: {}
@@ -4778,16 +5458,16 @@ snapshots:
       - babel-plugin-macros
       - supports-color
 
-  jest-cli@29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2)):
+  jest-cli@29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.3.3)):
     dependencies:
-      '@jest/core': 29.7.0(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2))
+      '@jest/core': 29.7.0(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.3.3))
       '@jest/test-result': 29.7.0
       '@jest/types': 29.6.3
       chalk: 4.1.2
-      create-jest: 29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2))
+      create-jest: 29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.3.3))
       exit: 0.1.2
       import-local: 3.2.0
-      jest-config: 29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2))
+      jest-config: 29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.3.3))
       jest-util: 29.7.0
       jest-validate: 29.7.0
       yargs: 17.7.2
@@ -4797,7 +5477,7 @@ snapshots:
       - supports-color
       - ts-node
 
-  jest-config@29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2)):
+  jest-config@29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.3.3)):
     dependencies:
       '@babel/core': 7.26.0
       '@jest/test-sequencer': 29.7.0
@@ -4823,7 +5503,7 @@ snapshots:
       strip-json-comments: 3.1.1
     optionalDependencies:
       '@types/node': 20.17.10
-      ts-node: 10.9.2(@types/node@20.17.10)(typescript@5.7.2)
+      ts-node: 10.9.2(@types/node@20.17.10)(typescript@5.3.3)
     transitivePeerDependencies:
       - babel-plugin-macros
       - supports-color
@@ -5049,12 +5729,12 @@ snapshots:
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
-  jest@29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2)):
+  jest@29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.3.3)):
     dependencies:
-      '@jest/core': 29.7.0(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2))
+      '@jest/core': 29.7.0(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.3.3))
       '@jest/types': 29.6.3
       import-local: 3.2.0
-      jest-cli: 29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2))
+      jest-cli: 29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.3.3))
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -5138,6 +5818,10 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
+  magic-string@0.30.17:
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.5.0
+
   magic-string@0.30.5:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
@@ -5219,6 +5903,8 @@ snapshots:
 
   ms@2.1.3: {}
 
+  muggle-string@0.4.1: {}
+
   multer@1.4.4-lts.1:
     dependencies:
       append-field: 1.0.0
@@ -5232,6 +5918,8 @@ snapshots:
   mute-stream@0.0.8: {}
 
   mute-stream@1.0.0: {}
+
+  nanoid@3.3.8: {}
 
   natural-compare@1.4.0: {}
 
@@ -5329,6 +6017,8 @@ snapshots:
 
   parseurl@1.3.3: {}
 
+  path-browserify@1.0.1: {}
+
   path-exists@4.0.0: {}
 
   path-is-absolute@1.0.1: {}
@@ -5361,6 +6051,12 @@ snapshots:
       find-up: 4.1.0
 
   pluralize@8.0.0: {}
+
+  postcss@8.4.49:
+    dependencies:
+      nanoid: 3.3.8
+      picocolors: 1.1.1
+      source-map-js: 1.2.1
 
   prelude-ls@1.2.1: {}
 
@@ -5487,6 +6183,31 @@ snapshots:
     dependencies:
       glob: 9.3.5
 
+  rollup@4.28.1:
+    dependencies:
+      '@types/estree': 1.0.6
+    optionalDependencies:
+      '@rollup/rollup-android-arm-eabi': 4.28.1
+      '@rollup/rollup-android-arm64': 4.28.1
+      '@rollup/rollup-darwin-arm64': 4.28.1
+      '@rollup/rollup-darwin-x64': 4.28.1
+      '@rollup/rollup-freebsd-arm64': 4.28.1
+      '@rollup/rollup-freebsd-x64': 4.28.1
+      '@rollup/rollup-linux-arm-gnueabihf': 4.28.1
+      '@rollup/rollup-linux-arm-musleabihf': 4.28.1
+      '@rollup/rollup-linux-arm64-gnu': 4.28.1
+      '@rollup/rollup-linux-arm64-musl': 4.28.1
+      '@rollup/rollup-linux-loongarch64-gnu': 4.28.1
+      '@rollup/rollup-linux-powerpc64le-gnu': 4.28.1
+      '@rollup/rollup-linux-riscv64-gnu': 4.28.1
+      '@rollup/rollup-linux-s390x-gnu': 4.28.1
+      '@rollup/rollup-linux-x64-gnu': 4.28.1
+      '@rollup/rollup-linux-x64-musl': 4.28.1
+      '@rollup/rollup-win32-arm64-msvc': 4.28.1
+      '@rollup/rollup-win32-ia32-msvc': 4.28.1
+      '@rollup/rollup-win32-x64-msvc': 4.28.1
+      fsevents: 2.3.3
+
   run-async@2.4.1: {}
 
   run-async@3.0.0: {}
@@ -5604,6 +6325,8 @@ snapshots:
   sisteransi@1.0.5: {}
 
   slash@3.0.0: {}
+
+  source-map-js@1.2.1: {}
 
   source-map-support@0.5.13:
     dependencies:
@@ -5753,22 +6476,22 @@ snapshots:
 
   tree-kill@1.2.2: {}
 
-  ts-api-utils@1.4.3(typescript@5.7.2):
+  ts-api-utils@1.4.3(typescript@5.3.3):
     dependencies:
-      typescript: 5.7.2
+      typescript: 5.3.3
 
-  ts-jest@29.2.5(@babel/core@7.26.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.0))(jest@29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2)))(typescript@5.7.2):
+  ts-jest@29.2.5(@babel/core@7.26.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.0))(jest@29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.3.3)))(typescript@5.3.3):
     dependencies:
       bs-logger: 0.2.6
       ejs: 3.1.10
       fast-json-stable-stringify: 2.1.0
-      jest: 29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2))
+      jest: 29.7.0(@types/node@20.17.10)(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.3.3))
       jest-util: 29.7.0
       json5: 2.2.3
       lodash.memoize: 4.1.2
       make-error: 1.3.6
       semver: 7.6.3
-      typescript: 5.7.2
+      typescript: 5.3.3
       yargs-parser: 21.1.1
     optionalDependencies:
       '@babel/core': 7.26.0
@@ -5776,17 +6499,17 @@ snapshots:
       '@jest/types': 29.6.3
       babel-jest: 29.7.0(@babel/core@7.26.0)
 
-  ts-loader@9.5.1(typescript@5.7.2)(webpack@5.90.1):
+  ts-loader@9.5.1(typescript@5.3.3)(webpack@5.90.1):
     dependencies:
       chalk: 4.1.2
       enhanced-resolve: 5.17.1
       micromatch: 4.0.8
       semver: 7.6.3
       source-map: 0.7.4
-      typescript: 5.7.2
+      typescript: 5.3.3
       webpack: 5.90.1
 
-  ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2):
+  ts-node@10.9.2(@types/node@20.17.10)(typescript@5.3.3):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.9
@@ -5800,7 +6523,7 @@ snapshots:
       create-require: 1.1.1
       diff: 4.0.2
       make-error: 1.3.6
-      typescript: 5.7.2
+      typescript: 5.3.3
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
 
@@ -5841,6 +6564,8 @@ snapshots:
 
   typescript@5.3.3: {}
 
+  typescript@5.6.3: {}
+
   typescript@5.7.2: {}
 
   uid@2.0.2:
@@ -5876,6 +6601,40 @@ snapshots:
       convert-source-map: 2.0.0
 
   vary@1.1.2: {}
+
+  vite@5.4.11(@types/node@20.17.10)(terser@5.34.1):
+    dependencies:
+      esbuild: 0.21.5
+      postcss: 8.4.49
+      rollup: 4.28.1
+    optionalDependencies:
+      '@types/node': 20.17.10
+      fsevents: 2.3.3
+      terser: 5.34.1
+
+  vscode-uri@3.0.8: {}
+
+  vue-router@4.5.0(vue@3.5.13(typescript@5.7.2)):
+    dependencies:
+      '@vue/devtools-api': 6.6.4
+      vue: 3.5.13(typescript@5.7.2)
+
+  vue-tsc@2.1.10(typescript@5.7.2):
+    dependencies:
+      '@volar/typescript': 2.4.11
+      '@vue/language-core': 2.1.10(typescript@5.7.2)
+      semver: 7.6.3
+      typescript: 5.7.2
+
+  vue@3.5.13(typescript@5.7.2):
+    dependencies:
+      '@vue/compiler-dom': 3.5.13
+      '@vue/compiler-sfc': 3.5.13
+      '@vue/runtime-dom': 3.5.13
+      '@vue/server-renderer': 3.5.13(vue@3.5.13(typescript@5.7.2))
+      '@vue/shared': 3.5.13
+    optionalDependencies:
+      typescript: 5.7.2
 
   walker@1.0.8:
     dependencies:
