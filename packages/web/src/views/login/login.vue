@@ -6,7 +6,7 @@ const loginUser = reactive({
   password : ''
 })
 async function handleLogin(){
-  if(loginUser.username && loginUser.password)
+  //if(loginUser.username && loginUser.password)
   await login( loginUser)
 }
 
