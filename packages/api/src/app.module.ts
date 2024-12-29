@@ -7,6 +7,7 @@ import { PrismaModule } from './prisma/prisma.module';
 import { RedisModule } from './redis/redis.module';
 import { PrismaService } from './prisma/prisma.service';
 import { MinioModule } from './minio/minio.module';
+import { JwtModule } from '@nestjs/jwt';
 
 @Module({
   imports: [
@@ -14,7 +15,18 @@ import { MinioModule } from './minio/minio.module';
     EmailModule,
     UserModule,
     RedisModule,
-    MinioModule
+    MinioModule,
+    JwtModule.registerAsync({
+      global: true,
+      useFactory() {
+        return {
+          secret: 'guang',
+          signOptions: {
+            expiresIn: '30m', // 默认 30 分钟
+          },
+        };
+      },
+    }),
   ],
   controllers: [AppController],
   providers: [

@@ -4,7 +4,11 @@ const routes: Array<RouteRecordRaw> = [
   // 根路径
   {
     path: '/',
-    redirect: '/home'
+    redirect: '/login'
+  },
+  {
+    path: '/login',
+    component: () => import('@/views/login/login.vue')
   },
   {
     path: '/home',
