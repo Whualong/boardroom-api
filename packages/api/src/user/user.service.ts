@@ -3,6 +3,7 @@ import { HttpException, HttpStatus, Inject, Injectable, Logger } from '@nestjs/c
 import { RegisterUserDto } from './dto/register-user.dto';
 import { RedisService } from '../redis/redis.service';
 import { PrismaService } from '../prisma/prisma.service';
+import { LoginUserDto } from './dto/login-user.dto';
 
 @Injectable()
 export class UserService {
@@ -52,4 +53,21 @@ export class UserService {
             return null;
         }
     }
+
+    async login(loginUser: LoginUserDto) {
+        const user = await this.prismaService.user.findUnique({
+            where: {
+                username: loginUser.username
+            }
+        })
+        if (!user) {
+            throw new HttpException('用户不存在', HttpStatus.BAD_REQUEST)
+        }
+        if (loginUser.password !== user.password) {
+            throw new HttpException('密码错误', HttpStatus.BAD_REQUEST)
+        }
+        delete user.password
+        return user
+    }
+
 }
