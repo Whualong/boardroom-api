@@ -1,5 +1,5 @@
 import axios from "axios";
-import { showFailToast } from "vant";
+import { showToast } from "vant";
 import { loginUser, RegisterUser } from "../types";
 const axiosInstance = axios.create({
   baseURL: 'http://localhost:3005/',
@@ -36,12 +36,17 @@ axiosInstance.interceptors.response.use(
       return Promise.reject(error);
     }
     let { data } = error.response;
+    console.log(`output->error`, error)
     if (data.statusCode === 401) {
-      showFailToast(data.message)
+      showToast(data.message)
       setTimeout(() => {
         window.location.href = '/login';
       }, 1500);
     } else {
+      showToast({
+        position: 'top',
+        message: data.message
+      })
       return Promise.reject(error);
     }
   }

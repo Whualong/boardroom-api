@@ -6,6 +6,7 @@ const loginUser = reactive({
   password : ''
 })
 async function handleLogin(){
+  if(loginUser.username && loginUser.password)
   await login( loginUser)
 }
 
@@ -17,8 +18,8 @@ async function handleLogin(){
     <div class="form">
       <!-- 可以使用 CellGroup 作为容器 -->
       <van-cell-group>
-        <van-field v-model="loginUser.username" label="账号" placeholder="请输入账号" />
-        <van-field v-model="loginUser.password" type="password" placeholder="请输入密码"  label="密码" />
+        <van-field :max="12" required v-model.trim="loginUser.username" label="账号" placeholder="请输入账号" />
+        <van-field required v-model.trim="loginUser.password" type="password" placeholder="请输入密码"  label="密码" />
       </van-cell-group>
     </div>
      <van-button class="login-btn" size="small" type="primary" @click="handleLogin">登录</van-button>
