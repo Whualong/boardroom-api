@@ -2,12 +2,11 @@ import { Body, Controller, Post, Inject } from '@nestjs/common';
 import { UserService } from './user.service';
 import { RegisterUserDto } from './dto/register-user.dto';
 import { LoginUserDto } from './dto/login-user.dto';
-import { JwtService } from '@nestjs/jwt'
+import { JwtService } from '@nestjs/jwt';
 
 @Controller('user')
 export class UserController {
-
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService) {}
 
   @Post('register')
   async register(@Body() registerUser: RegisterUserDto) {
@@ -15,7 +14,7 @@ export class UserController {
   }
 
   @Inject(JwtService)
-  private jwtService: JwtService
+  private jwtService: JwtService;
 
   @Post('login')
   async login(@Body() loginUser: LoginUserDto) {
@@ -28,9 +27,9 @@ export class UserController {
           username: user.username,
         },
         {
-          expiresIn: '7d'
+          expiresIn: '7d',
         }
-      )
-    }
+      ),
+    };
   }
 }

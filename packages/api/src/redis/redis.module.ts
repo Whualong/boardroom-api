@@ -23,4 +23,4 @@ import { createClient } from 'redis';
   ],
   exports: [RedisService],
 })
-export class RedisModule { }
+export class RedisModule {}
